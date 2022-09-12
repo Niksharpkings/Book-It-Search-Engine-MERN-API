@@ -11,9 +11,20 @@ function App() {
       <>
         <Navbar />
         <Routes>
-          <Route exact path='/' caseSensitive={false} element={<SearchBooks/>} />
-          <Route exact path='/saved' caseSensitive={false} element={<SavedBooks/>} />
-          <Route render={() => <h1 className='display-2'>Wrong page!</h1>} />
+          <Route
+            exact
+            path='/'
+            caseSensitive={false}
+            element={<SearchBooks />} />
+          <Route
+            exact
+            path='/saved'
+            caseSensitive={false}
+            element={<SavedBooks />} />
+          <Route
+            render={() => <h1 className='display-2'>
+              Wrong page!
+            </h1>} />
         </Routes>
       </>
     </Router>
