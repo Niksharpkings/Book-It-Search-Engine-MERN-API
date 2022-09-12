@@ -1,5 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
 }
 
 h1,
@@ -8,10 +14,189 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Rubik Mono One', sans-serif;
+  font-family: "Rubik Mono One", sans-serif;
+}
+.main {
+  width: 100%;
+  background-color: rgb(197, 196, 196);
 }
 
-.small {
+.card-container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0.5em 0;
+  background-color: rgb(0, 0, 0);
+  border-radius: 0.5em;
+  box-shadow: 0 4px 8px 0 rgba(23, 206, 197, 0.822),
+    0 6px 20px 0 rgba(19, 16, 194, 0.925);
+}
+
+.card {
+  width: 90%;
+  margin: 0.5em auto;
+  background-color: rgba(31, 31, 31, 0.95);
+  border: 2px solid rgb(173, 223, 169);
+  width: 90%;
+  align-items: center;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.822),
+    0 6px 20px 0 rgba(23, 135, 155, 0.925);
+}
+
+.card-header {
+  margin-bottom: 5px;
+  margin-top: 10px;
+  height: 5rem;
+  padding-bottom: 10px;
+  color: white;
+  text-align: center;
+  padding: 0.5em;
+  font-size: 1.2rem;
+  text-shadow: 2px 2px 2px rgba(32, 138, 170, 0.658), 0 0 10px purple,
+    0 0 10px rgb(84, 173, 10);
+}
+.btn-block {
+  background-color: green;
+  justify-content: baseline;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.822),
+    0 6px 20px 0 rgba(23, 135, 155, 0.925);
+  margin: auto;
+  width: 100%;
+  padding: 0.5em;
+  text-align: center;
+  font-size: large;
+  text-shadow: 2px 4px 4px purple, 0 0 25px purple, 0 0 5px darkblue;
+  display: block;
+  border: 2px solid rgb(173, 223, 169);
+  outline: 2px solid rgba(169, 223, 210, 0.541);
+}
+.images,
+.description {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.images {
+  padding: 1.2em 1em;
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: 300px;
+}
+
+.description {
+  color: white;
+  padding: 1em 2em;
+}
+.images img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: 15% 100%;
+}
+.description {
+  padding-bottom: 0.5em;
+  margin-bottom: 5px;
+  text-align: left;
+  height: 15rem;
+  color: rgb(0, 0, 0);
+  padding: 0.5em;
+  border-radius: 10px;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 1px 1px 1px green, 0 0 1px purple, 0 0 1px darkblue;
+  font-weight: 300;
+  width: 100%;
+  font-size: 1rem;
+  font-style: oblique;
+  background-color: rgb(134, 231, 255);
+  outline: 2px solid rgba(16, 131, 104, 0.247);
+  border: 2px solid rgba(10, 95, 121, 0.658);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  z-index: 1;
+}
+
+.descriptionHeader {
+  margin-bottom: 5px;
+  text-align: left;
+  height: 5rem;
+  color: rgb(0, 0, 0);
+  padding: 0.5em;
+  border-radius: 10px;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 1px 1px 1px green, 0 0 1px purple, 0 0 1px darkblue;
+  font-weight: 300;
+  font-size: 1rem;
+  font-style: oblique;
+  background-color: lightgray;
+  outline: 2px solid rgba(16, 131, 104, 0.247);
+  border: 2px solid rgba(10, 95, 121, 0.658);
+}
+
+.author {
+  margin-bottom: 5px;
+  height: 5rem;
+  color: white;
+  padding: 0.5em;
+  border-radius: 10px;
+  justify-content: center;
+  text-align: center;
+  text-shadow: 2px 4px 4px purple, 0 0 25px purple, 0 0 5px darkblue;
+  font-weight: 300;
+  font-size: 1rem;
+  font-style: oblique;
+  background-color: rgb(46, 46, 46);
+  outline: 2px solid rgba(16, 131, 104, 0.247);
+  border: 2px solid rgba(10, 95, 121, 0.658);
+}
+.title {
+  font-size: 1em;
   font-weight: 300;
   font-style: italic;
+  text-align: left;
+  padding: 0.5em 0;
+  text-shadow: 2px 4px 4px purple, 0 0 25px purple, 0 0 5px darkblue;
+}
+
+.btn-block {
+  width: 100%;
+  padding: 0.5em;
+  text-align: center;
+  font-size: large;
+  text-shadow: 2px 4px 4px purple, 0 0 25px purple, 0 0 5px darkblue;
+  display: block;
+  border: 2px solid rgb(173, 223, 169);
+  outline: 2px solid rgba(169, 223, 210, 0.541);
+  margin: 10 auto;
+  top: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.822),
+    0 6px 20px 0 rgba(23, 135, 155, 0.925);
+}
+
+@media (min-width: 640px) {
+  .card-container {
+    display: flex;
+    flex-flow: wrap;
+  }
+  .card {
+    flex: 1 0 48%;
+    margin: 1%;
+  }
+}
+@media (min-width: 1001px) {
+  .card {
+    flex: 1 0 31%;
+  }
+
+  .card:last-of-type {
+    flex-grow: 0;
+  }
 }

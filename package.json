@@ -10,9 +10,9 @@
     "build": "cd client && npm run build"
   },
   "keywords": [],
-  "author": "Nikita 'Nik' Sharpio",
+  "author": "Nikita 'Nik' Sharpio aka niksharpkings",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^5.1.0"
+    "concurrently": "^7.4.0"
   }
 }
