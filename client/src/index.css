@@ -7,6 +7,7 @@
 body {
   font-family: "Rubik", sans-serif;
 }
+
 h1,
 h2,
 h3,
@@ -15,6 +16,7 @@ h5,
 h6 {
   font-family: "Rubik Mono One", sans-serif;
 }
+
 .main {
   width: 100%;
   background-color: rgb(197, 196, 196);
@@ -80,42 +82,40 @@ h6 {
 }
 
 .description {
-  color: white;
-  padding: 0.5em;
-  margin-bottom: 5px;
-  height: 15rem;
-  color: rgb(0, 0, 0);
-  padding: 1em 2em 0.5em 0em;
-  border-radius: 10px;
-  justify-content: center;
-  text-align: center;
-  text-shadow: 1px 1px 1px green, 0 0 1px purple, 0 0 1px darkblue;
-  font-weight: 300;
-  width: 100%;
-  font-size: 1rem;
-  font-style: oblique;
   background-color: rgb(134, 231, 255);
   outline: 2px solid rgba(16, 131, 104, 0.247);
   border: 2px solid rgba(10, 95, 121, 0.658);
+  border-radius: 10px;
+  text-shadow: 1px 1px 1px green, 0 0 1px purple, 0 0 1px darkblue;
+  color: white;
+  font-size: 1rem;
+  font-style: oblique;
+  font-weight: 300;
+  margin-bottom: 5px;
+  padding: 1em 2em 0.5em 0em;
+  width: 100%;
+  height: 15rem;
+  justify-content: center;
+  text-align: center;;
   overflow-x: hidden;
   overflow-y: scroll;
   z-index: 1;
 }
 
 .descriptionHeader {
-  height: 3rem;
-  color: rgb(0, 0, 0);
+  background-color: lightgray;
+  color: white;
+  text-shadow: 1px 1px 1px green, 0 0 1px purple, 0 0 1px darkblue;
+  outline: 2px solid rgba(16, 131, 104, 0.247);
+  border: 2px solid rgba(10, 95, 121, 0.658);
   padding: 0.5em;
+  height: 3rem;
   border-radius: 10px;
   justify-content: center;
   text-align: center;
-  text-shadow: 1px 1px 1px green, 0 0 1px purple, 0 0 1px darkblue;
   font-weight: 300;
   font-size: 1rem;
   font-style: oblique;
-  background-color: lightgray;
-  outline: 2px solid rgba(16, 131, 104, 0.247);
-  border: 2px solid rgba(10, 95, 121, 0.658);
 }
 
 .author {
@@ -164,7 +164,7 @@ h6 {
     0 6px 20px 0 rgba(23, 135, 155, 0.925);
 }
 
-@media (min-width: 640px) {
+@media only screen and (min-width: 640px) {
   .card-container {
     display: flex;
     flex-flow: wrap;
@@ -174,7 +174,8 @@ h6 {
     margin: 1%;
   }
 }
-@media (min-width: 1001px) {
+
+@media only screen and (min-width: 1001px) {
   .card {
     flex: 1 0 31%;
   }
