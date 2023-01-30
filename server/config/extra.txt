@@ -1,0 +1,85 @@
+//Great.
+// https://mongoosejs.com/docs/deprecations.html
+// https://mongoosejs.com/docs/migrating_to_6.html#no-more-deprecation-warning-options
+
+// mongoose.set('autoIndex', false);
+// mongoose.set('autoCreate', false);
+// useNewUrlParser: true,
+// useUnifiedTopology: true,
+// useCreateIndex: true,
+// useFindAndModify: false,
+//Great.
+// https://mongoosejs.com/docs/deprecations.html
+// https://mongoosejs.com/docs/migrating_to_6.html#no-more-deprecation-warning-options
+
+// useNewUrlParser: true,
+// useUnifiedTopology: true,
+// useCreateIndex: true,
+// useFindAndModify: false,
+// autoIndex: false, // Don't build indexes
+// poolSize: 10, // Maintain up to 10 socket connections
+// serverSelectionTimeoutMS: 5000, // Keep trying to send operations for 5 seconds
+// socketTimeoutMS: 45000, // Close sockets after 45 seconds of inactivity
+// family: 4 // Use IPv4, skip trying IPv6
+// debug: true, // set to true to see the debug messages
+// autoCreate: false // Don't create collections automatically
+// autoIndex: false // Don't build indexes
+// autoCreate: false // Don't create collections automatically
+// connectTimeoutMS: 10000, // Give up initial connection after 10 seconds
+// replicaSet: 'myReplicaSetName', // Replica set name
+// ssl: true, // Use SSL
+// sslValidate: true, // Validate SSL certificates
+// sslCA: fs.readFileSync('./ssl-ca.pem'), // SSL Certificate Authority
+// sslCert: fs.readFileSync('./ssl-cert.pem'), // SSL Certificate
+// sslKey: fs.readFileSync('./ssl-key.pem'), // SSL Certificate Key
+// sslPass: '123456', // SSL Certificate Passphrase
+// authSource: 'admin', // Specify authentication database
+// auth: { // Set default authentication credentials
+//   user: 'myUserName',
+//   password: 'password'
+// },
+// w: 'majority', // Specify write concern
+// timeout: 10000, // Specify write concern timeout
+// j: true, // Specify journal write concern
+// forceServerObjectId: false, // Force server to assign _id values instead of driver
+// serializeFunctions: false, // Serialize functions on any object
+// ignoreUndefined: false, // Specify if the BSON serializer should ignore undefined fields
+// raw: false, // Return document results as raw BSON buffers
+// promoteLongs: true, // Promotes Long values to number if they fit inside the 53 bits resolution
+// promoteValues: true, // Promotes Binary BSON values to native Node Buffers
+// promoteBuffers: false, // Promotes Binary BSON values to native Node Buffers
+// bufferMaxEntries: -1, // If not connected, return errors immediately rather than waiting for reconnect
+// readPreference: 'primary', // Specify read preference if mode is specified
+// pkFactory: null, // A primary key factory object for generation of custom _id keys
+// promiseLibrary: null, // A Promise library class the application wishes to use such as Bluebird, must be ES6 compatible
+// readConcern: null, // Specify a read concern for the collection
+// maxStalenessSeconds: 15, // Cutoff latency point in MS for ReplicaSet or Mongos proxies
+// loggerLevel: 'error', // Control the logging level
+// logger: null, // Custom logger object
+// promoteLongs: true, // Promotes Long values to number if they fit inside the 53 bits resolution
+// domainsEnabled: false, // Enable the wrapping of the callback in the current domain, disabled by default to avoid perf hit
+// validateOptions: false, // Validate MongoClient passed in options for correctness
+// appname: 'myAppName', // Specify an app name for the connection
+// authMechanism: 'DEFAULT', // Specify authentication mechanism
+// authMechanismProperties: null, // Specify properties for the selected authMechanism as an object
+// authSource: '$external', // Specify the database to authenticate against
+// compressors: 'none', // Specify compressors for driver communication
+// connectTimeoutMS: 10000, // Specify the connect timeout in milliseconds
+// family: 4, // Specify the connection family either IPv4 or IPv6
+// gssapiServiceName: 'mongodb', // Specify the service name when connecting with Kerberos
+// heartbeatFrequencyMS: 10000, // Specify the frequency in milliseconds to check on the health of the connection
+// localThresholdMS: 15, // Specify the size of the latency window for selecting among multiple suitable MongoDB instances
+// maxIdleTimeMS: 0, // Specify the maximum idle time in milliseconds for a pooled socket
+// maxPoolSize: 100, // Specify the maximum pool size for the connection
+// minPoolSize: 0, // Specify the minimum pool size for the connection
+// monitorCommands: false, // Specify if the driver should monitor commands
+// password: 'password', // Specify the password for authentication
+// pkFactory: null, // Specify a primary key factory object for generation of custom _id keys
+// promiseLibrary: null, // Specify a Promise library class the application wishes to use such as Bluebird
+// readConcern: null, // Specify a read concern for the collection
+// readPreference: 'primary', // Specify the read preference
+// readPreferenceTags: null, // Specify the tags for the read preference
+// reconnectInterval: 0, // Specify the number of milliseconds between retries
+// reconnectTries: 30, // Specify the number of retries for reconnect
+// replicaSet: 'myReplicaSetName', // Specify the name of the replica set to connect to
+// retryWrites: false, // Specify if the driver should retry writes

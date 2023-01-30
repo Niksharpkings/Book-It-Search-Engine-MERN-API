@@ -1,0 +1,451 @@
+
+//express is the framework for the server
+// import express from "express";
+// // path is a built-in module
+// import path from "path";
+// // mongoose is an object data modeling (ODM) library for MongoDB and Node.js
+// import db from "./config/connection";
+// // server file routes
+// // const routes = require("./routes");
+// // the ApolloServer class is imported from the apollo-server-express package
+// import { ApolloServer } from "apollo-server-express";
+// import {
+//   ApolloServerPluginDrainHttpServer,
+//   ApolloServerPluginLandingPageLocalDefault,
+// } from "apollo-server-core";
+// // import express from 'express';
+// import http from "http";
+
+// // middleware authentication
+// import { authMiddleware } from "./utils/auth";
+// // react graphql typeDefs and resolvers
+// import { typeDefs, resolvers } from "./schema";
+
+// import systemInfo from "./utils/systemInfo.js";
+
+//   // await new Promise((resolve) => httpServer.listen({ port: 4000 }, resolve));
+//   console.log(`🚀 Server ready at http://127.0.0.1:4000${server.graphqlPath}`);
+// };
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "../client/build/index.html"));
+// });
+
+// start the server
+
+// db.once("open", () => {
+//   app.listen(PORT, () => {
+//     // console.log("Here Your Node.js System Info", systemInfo);
+//     console.log(`
+//   Connection 🟢
+//   ${today.toUTCString()}
+//   Budget-Tracker App ⚡On 127.0.0.1:${PORT}!✅
+//   Performance:${performance.now()}
+//   `);
+//     // log where we can go to test our GQL API
+//     console.log(`
+//   Connection 🟢
+//   ⚡Running GraphQL at http://127.0.0.1:${PORT}${server.graphqlPath}
+//   ${today.toUTCString()}
+//   Performance:${performance.now()}
+//   `);
+//   });
+// });
+
+// Call the async function to start the server
+
+//express is the framework for the server
+// import express from "express";
+// // path is a built-in module
+// import path from "path";
+// // mongoose is an object data modeling (ODM) library for MongoDB and Node.js
+// import db from "./config/connection";
+// // server file routes
+// // const routes = require("./routes");
+// // the ApolloServer class is imported from the apollo-server-express package
+// import { ApolloServer } from "apollo-server-express";
+// import {
+//   ApolloServerPluginDrainHttpServer,
+//   ApolloServerPluginLandingPageLocalDefault,
+// } from "apollo-server-core";
+// // import express from 'express';
+// import http from "http";
+
+// // middleware authentication
+// import { authMiddleware } from "./utils/auth";
+// // react graphql typeDefs and resolvers
+// import { typeDefs, resolvers } from "./schema";
+
+// import systemInfo from "./utils/systemInfo.js";
+
+// const express = require("express");
+// const path = require("path");
+// const db = require("./config/connection");
+// const { ApolloServer } = require("apollo-server-express");
+// const { ApolloServerPluginDrainHttpServer, ApolloServerPluginLandingPageLocalDefault } = require('apollo-server-core');
+// const http = require('http');
+// const { authMiddleware } = require("./utils/auth");
+// const { typeDefs, resolvers } = require("./schema");
+// //const systemInfo = require("./utils/systemInfo.js");
+
+// server port number, 3001 is the default for localhost
+//graphql server / mongoose connection
+// const PORT = process.env.PORT || 3001;
+
+// const server = new ApolloServer({
+//   // typeDefs and resolvers are imported from the schema folder
+//   typeDefs,
+//   resolvers,
+//   // context: authMiddleware is imported from the utils folder and is used to parse the token from the request headers and place the decoded user data onto the context object for use in resolvers and typeDefs as context.user. // https://www.apollographql.com/docs/apollo-server/data/resolvers/#the-context-argument
+//   context: authMiddleware,
+//   // subscriptions: { path: "/graphql" },
+// });
+
+// // extracting express into the app variable
+// const app = express();
+// // express.urlencoded() is a method inbuilt in express to recognize the incoming Request Object as strings or arrays. This method is called as a middleware in your application using the code: app.use(express.urlencoded());
+// app.use(express.urlencoded({ extended: true }));
+// // express.json() is a method inbuilt in express to recognize the incoming Request Object as a JSON Object. This method is called as a middleware in your application using the code: app.use(express.json());
+// app.use(express.json());
+
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static(path.join(__dirname, "../client/build")));
+// }
+// // startApolloServer is a function that creates a new ApolloServer instance that is async'ed passed into a schema data (typeDefs and resolvers)
+// const startApolloServer = async function startApolloServer(
+//   typeDefs,
+//   resolvers
+// ) {
+//   const app = express();
+//   const httpServer = http.createServer(app);
+//   const server = new ApolloServer({
+//     typeDefs,
+//     resolvers,
+//     csrfPrevention: true,
+//     cache: "bounded",
+//     context: authMiddleware,
+//     plugins: [
+//       ApolloServerPluginDrainHttpServer({ httpServer }),
+//       ApolloServerPluginLandingPageLocalDefault({ embed: true }),
+//     ],
+//   });
+
+//   await server.start();
+//   server.applyMiddleware({ app });
+//   const timeElapsed = Date.now();
+//   const today = new Date(timeElapsed);
+
+//   await new Promise(resolve => httpServer.listen({ port: 3000 }, resolve));
+//     db.once("open", () => {
+//     server.listen(PORT, () => {
+//       // console.log("Here Your Node.js System Info", systemInfo);
+//       console.log(`
+//     Connection 🟢
+//     ${today.toUTCString()}
+//     Budget-Tracker App ⚡On 127.0.0.1:${PORT}!✅
+//     Performance:${performance.now()}
+//     `);
+//       // log where we can go to test our GQL API
+//       console.log(`
+//     Connection 🟢
+//     ⚡Running GraphQL at http://127.0.0.1:${PORT}${server.graphqlPath}
+//     ${today.toUTCString()}
+//     Performance:${performance.now()}
+//     `);
+//     });
+//   });
+// };
+// startApolloServer(typeDefs, resolvers);
+
+// const express = require("express");
+// const path = require("path");
+// const db = require("./config/connection");
+// const { ApolloServer } = require("apollo-server-express");
+// // const { ApolloServerPluginDrainHttpServer, ApolloServerPluginLandingPageLocalDefault } = require('apollo-server-core');
+// // const http = require('http');
+// const { authMiddleware } = require("./utils/auth");
+// const { typeDefs, resolvers } = require("./schema");
+// //const systemInfo = require("./utils/systemInfo.js");
+
+// const PORT = process.env.PORT || 3001;
+
+// // extracting express into the app variable
+// const app = express();
+// // express.urlencoded() is a method inbuilt in express to recognize the incoming Request Object as strings or arrays. This method is called as a middleware in your application using the code: app.use(express.urlencoded());
+// app.use(express.urlencoded({ extended: true }));
+// // express.json() is a method inbuilt in express to recognize the incoming Request Object as a JSON Object. This method is called as a middleware in your application using the code: app.use(express.json());
+// app.use(express.json());
+
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static(path.join(__dirname, "../client/build")));
+// }
+// // startApolloServer is a function that creates a new ApolloServer instance that is async'ed passed into a schema data (typeDefs and resolvers)
+// const startApolloServer = async function startApolloServer(
+//   typeDefs,
+//   resolvers
+// ) {
+//   const app = express();
+//   const httpServer = http.createServer(app);
+//   const server = new ApolloServer({
+//     typeDefs,
+//     resolvers,
+//     csrfPrevention: true,
+//     cache: "bounded",
+//     context: authMiddleware,
+//     plugins: [
+//       ApolloServerPluginDrainHttpServer({ httpServer }),
+//       ApolloServerPluginLandingPageLocalDefault({ embed: true }),
+//     ],
+//   });
+
+//   await server.start();
+//   server.applyMiddleware({ app });
+//   const timeElapsed = Date.now();
+//   const today = new Date(timeElapsed);
+
+//   await new Promise(resolve => httpServer.listen({ port: 3000 }, resolve));
+//     db.once("open", () => {
+//     server.listen(PORT, () => {
+//       // console.log("Here Your Node.js System Info", systemInfo);
+//       console.log(`
+//     Connection 🟢
+//     ${today.toUTCString()}
+//     Budget-Tracker App ⚡On 127.0.0.1:${PORT}!✅
+//     Performance:${performance.now()}
+//     `);
+//       // log where we can go to test our GQL API
+//       console.log(`
+//     Connection 🟢
+//     ⚡Running GraphQL at http://127.0.0.1:${PORT}${server.graphqlPath}
+//     ${today.toUTCString()}
+//     Performance:${performance.now()}
+//     `);
+//     });
+//   });
+// };
+
+
+///
+
+//express is the framework for the server
+// import express from "express";
+// // path is a built-in module
+// import path from "path";
+// // mongoose is an object data modeling (ODM) library for MongoDB and Node.js
+// import db from "./config/connection";
+// // server file routes
+// // const routes = require("./routes");
+// // the ApolloServer class is imported from the apollo-server-express package
+// import { ApolloServer } from "apollo-server-express";
+// import {
+//   ApolloServerPluginDrainHttpServer,
+//   ApolloServerPluginLandingPageLocalDefault,
+// } from "apollo-server-core";
+// // import express from 'express';
+// import http from "http";
+
+// // middleware authentication
+// import { authMiddleware } from "./utils/auth";
+// // react graphql typeDefs and resolvers
+// import { typeDefs, resolvers } from "./schema";
+
+// import systemInfo from "./utils/systemInfo.js";
+
+//   // await new Promise((resolve) => httpServer.listen({ port: 4000 }, resolve));
+//   console.log(`🚀 Server ready at http://127.0.0.1:4000${server.graphqlPath}`);
+// };
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "../client/build/index.html"));
+// });
+
+// start the server
+
+// db.once("open", () => {
+//   app.listen(PORT, () => {
+//     // console.log("Here Your Node.js System Info", systemInfo);
+//     console.log(`
+//   Connection 🟢
+//   ${today.toUTCString()}
+//   Budget-Tracker App ⚡On 127.0.0.1:${PORT}!✅
+//   Performance:${performance.now()}
+//   `);
+//     // log where we can go to test our GQL API
+//     console.log(`
+//   Connection 🟢
+//   ⚡Running GraphQL at http://127.0.0.1:${PORT}${server.graphqlPath}
+//   ${today.toUTCString()}
+//   Performance:${performance.now()}
+//   `);
+//   });
+// });
+
+// Call the async function to start the server
+
+//express is the framework for the server
+// import express from "express";
+// // path is a built-in module
+// import path from "path";
+// // mongoose is an object data modeling (ODM) library for MongoDB and Node.js
+// import db from "./config/connection";
+// // server file routes
+// // const routes = require("./routes");
+// // the ApolloServer class is imported from the apollo-server-express package
+// import { ApolloServer } from "apollo-server-express";
+// import {
+//   ApolloServerPluginDrainHttpServer,
+//   ApolloServerPluginLandingPageLocalDefault,
+// } from "apollo-server-core";
+// // import express from 'express';
+// import http from "http";
+
+// // middleware authentication
+// import { authMiddleware } from "./utils/auth";
+// // react graphql typeDefs and resolvers
+// import { typeDefs, resolvers } from "./schema";
+
+// import systemInfo from "./utils/systemInfo.js";
+
+// const express = require("express");
+// const path = require("path");
+// const db = require("./config/connection");
+// const { ApolloServer } = require("apollo-server-express");
+// const { ApolloServerPluginDrainHttpServer, ApolloServerPluginLandingPageLocalDefault } = require('apollo-server-core');
+// const http = require('http');
+// const { authMiddleware } = require("./utils/auth");
+// const { typeDefs, resolvers } = require("./schema");
+// //const systemInfo = require("./utils/systemInfo.js");
+
+// server port number, 3001 is the default for localhost
+//graphql server / mongoose connection
+// const PORT = process.env.PORT || 3001;
+
+// const server = new ApolloServer({
+//   // typeDefs and resolvers are imported from the schema folder
+//   typeDefs,
+//   resolvers,
+//   // context: authMiddleware is imported from the utils folder and is used to parse the token from the request headers and place the decoded user data onto the context object for use in resolvers and typeDefs as context.user. // https://www.apollographql.com/docs/apollo-server/data/resolvers/#the-context-argument
+//   context: authMiddleware,
+//   // subscriptions: { path: "/graphql" },
+// });
+
+// // extracting express into the app variable
+// const app = express();
+// // express.urlencoded() is a method inbuilt in express to recognize the incoming Request Object as strings or arrays. This method is called as a middleware in your application using the code: app.use(express.urlencoded());
+// app.use(express.urlencoded({ extended: true }));
+// // express.json() is a method inbuilt in express to recognize the incoming Request Object as a JSON Object. This method is called as a middleware in your application using the code: app.use(express.json());
+// app.use(express.json());
+
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static(path.join(__dirname, "../client/build")));
+// }
+// // startApolloServer is a function that creates a new ApolloServer instance that is async'ed passed into a schema data (typeDefs and resolvers)
+// const startApolloServer = async function startApolloServer(
+//   typeDefs,
+//   resolvers
+// ) {
+//   const app = express();
+//   const httpServer = http.createServer(app);
+//   const server = new ApolloServer({
+//     typeDefs,
+//     resolvers,
+//     csrfPrevention: true,
+//     cache: "bounded",
+//     context: authMiddleware,
+//     plugins: [
+//       ApolloServerPluginDrainHttpServer({ httpServer }),
+//       ApolloServerPluginLandingPageLocalDefault({ embed: true }),
+//     ],
+//   });
+
+//   await server.start();
+//   server.applyMiddleware({ app });
+//   const timeElapsed = Date.now();
+//   const today = new Date(timeElapsed);
+
+//   await new Promise(resolve => httpServer.listen({ port: 3000 }, resolve));
+//     db.once("open", () => {
+//     server.listen(PORT, () => {
+//       // console.log("Here Your Node.js System Info", systemInfo);
+//       console.log(`
+//     Connection 🟢
+//     ${today.toUTCString()}
+//     Budget-Tracker App ⚡On 127.0.0.1:${PORT}!✅
+//     Performance:${performance.now()}
+//     `);
+//       // log where we can go to test our GQL API
+//       console.log(`
+//     Connection 🟢
+//     ⚡Running GraphQL at http://127.0.0.1:${PORT}${server.graphqlPath}
+//     ${today.toUTCString()}
+//     Performance:${performance.now()}
+//     `);
+//     });
+//   });
+// };
+// startApolloServer(typeDefs, resolvers);
+
+// const express = require("express");
+// const path = require("path");
+// const db = require("./config/connection");
+// const { ApolloServer } = require("apollo-server-express");
+// // const { ApolloServerPluginDrainHttpServer, ApolloServerPluginLandingPageLocalDefault } = require('apollo-server-core');
+// // const http = require('http');
+// const { authMiddleware } = require("./utils/auth");
+// const { typeDefs, resolvers } = require("./schema");
+// //const systemInfo = require("./utils/systemInfo.js");
+
+// const PORT = process.env.PORT || 3001;
+
+// // extracting express into the app variable
+// const app = express();
+// // express.urlencoded() is a method inbuilt in express to recognize the incoming Request Object as strings or arrays. This method is called as a middleware in your application using the code: app.use(express.urlencoded());
+// app.use(express.urlencoded({ extended: true }));
+// // express.json() is a method inbuilt in express to recognize the incoming Request Object as a JSON Object. This method is called as a middleware in your application using the code: app.use(express.json());
+// app.use(express.json());
+
+// if (process.env.NODE_ENV === "production") {
+//   app.use(express.static(path.join(__dirname, "../client/build")));
+// }
+// // startApolloServer is a function that creates a new ApolloServer instance that is async'ed passed into a schema data (typeDefs and resolvers)
+// const startApolloServer = async function startApolloServer(
+//   typeDefs,
+//   resolvers
+// ) {
+//   const app = express();
+//   const httpServer = http.createServer(app);
+//   const server = new ApolloServer({
+//     typeDefs,
+//     resolvers,
+//     csrfPrevention: true,
+//     cache: "bounded",
+//     context: authMiddleware,
+//     plugins: [
+//       ApolloServerPluginDrainHttpServer({ httpServer }),
+//       ApolloServerPluginLandingPageLocalDefault({ embed: true }),
+//     ],
+//   });
+
+//   await server.start();
+//   server.applyMiddleware({ app });
+//   const timeElapsed = Date.now();
+//   const today = new Date(timeElapsed);
+
+//   await new Promise(resolve => httpServer.listen({ port: 3000 }, resolve));
+//     db.once("open", () => {
+//     server.listen(PORT, () => {
+//       // console.log("Here Your Node.js System Info", systemInfo);
+//       console.log(`
+//     Connection 🟢
+//     ${today.toUTCString()}
+//     Budget-Tracker App ⚡On 127.0.0.1:${PORT}!✅
+//     Performance:${performance.now()}
+//     `);
+//       // log where we can go to test our GQL API
+//       console.log(`
+//     Connection 🟢
+//     ⚡Running GraphQL at http://127.0.0.1:${PORT}${server.graphqlPath}
+//     ${today.toUTCString()}
+//     Performance:${performance.now()}
+//     `);
+//     });
+//   });
+// };

@@ -1,24 +1,25 @@
 {
-  "name": "book-it-search-engine-mern-api-server",
+  "name": "book-it-server",
   "version": "1.0.0",
   "description": "A fully functioning Google Books API search engine built refactor into a GraphQL Apollo Server API from a RESTful API. The app is built using the MERN stack, with a React front end, MongoDB database, and Node.js/Express.js server and GraphQL API. It's allow users to save book searches to the back end.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "watch": "nodemon server.js"
+    "watch": "nodemon --experimental-modules --es-module-specifier-resolution=node --watch --progress server.js"
   },
   "keywords": [],
   "author": "Nikita 'Nik' Sharpio aka niksharpkings",
   "license": "ISC",
   "dependencies": {
-    "apollo-server-express": "^3.10.2",
-    "bcrypt": "^5.0.1",
-    "express": "^4.18.1",
+    "bcrypt": "^5.1.0",
+    "express": "^4.18.2",
     "graphql": "^16.6.0",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.6.0"
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.9.0",
+    "apollo-server-core": "^3.11.1",
+    "apollo-server-express": "^3.11.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.19"
+    "nodemon": "^2.0.20"
   }
 }
