@@ -55,10 +55,7 @@ const SavedBooks = () => {
     <div fluid="true" className="card-container text-light bg-dark">
       <h1>
         {userData.savedBooks.length
-          ? `Viewing ${userData.savedBooks.length} saved ${
-                userData.savedBooks.length === 1 ? "book" : "books"
-              }:`
-          : "You have no saved books!"}
+          ? `Viewing ${userData.savedBooks.length} saved ${ userData.savedBooks.length === 1 ? "book" : "books" } : "You have no saved books!"`
       </h1>
       <div className="card-container">
         {userData.savedBooks.map((book) => {
