@@ -40,7 +40,6 @@ h6 {
   margin: 0.5em auto;
   background-color: rgba(31, 31, 31, 0.95);
   border: 2px solid rgb(173, 223, 169);
-  width: 90%;
   align-items: center;
   border-radius: 10px;
   color: white;
@@ -52,15 +51,15 @@ h6 {
   margin-bottom: 5px;
   margin-top: 10px;
   height: 5rem;
-  padding-bottom: 10px;
   color: white;
   text-align: center;
-  padding: 0.5em;
+  padding: 0.5em 0.5em 10px 0.5em;
   font-size: 1.2rem;
   text-shadow: 2px 2px 2px rgba(32, 138, 170, 0.658), 0 0 10px purple,
     0 0 10px rgb(84, 173, 10);
 }
 
+<<<<<<< HEAD
 .btn-block {
   background-color: green;
   justify-content: baseline;
@@ -79,6 +78,8 @@ h6 {
   outline: 2px solid rgba(169, 223, 210, 0.541);
 }
 
+=======
+>>>>>>> d8c7a6c3b37ec1254f17153a7a14c6ab71cef4c6
 .images,
 .description {
   width: 90%;
@@ -93,11 +94,14 @@ h6 {
   height: 300px;
 }
 
+<<<<<<< HEAD
 .description {
   color: white;
   padding: 1em 2em;
 }
 
+=======
+>>>>>>> d8c7a6c3b37ec1254f17153a7a14c6ab71cef4c6
 .images img {
   display: block;
   margin: 0 auto;
@@ -108,43 +112,45 @@ h6 {
 }
 
 .description {
-  padding-bottom: 0.5em;
-  margin-bottom: 5px;
-  text-align: left;
-  height: 15rem;
-  color: rgb(0, 0, 0);
-  padding: 0.5em;
-  border-radius: 10px;
-  justify-content: center;
-  text-align: center;
-  text-shadow: 1px 1px 1px green, 0 0 1px purple, 0 0 1px darkblue;
-  font-weight: 300;
-  width: 100%;
-  font-size: 1rem;
-  font-style: oblique;
   background-color: rgb(134, 231, 255);
   outline: 2px solid rgba(16, 131, 104, 0.247);
   border: 2px solid rgba(10, 95, 121, 0.658);
+  border-radius: 10px;
+  text-shadow: 1px 1px 1px green, 0 0 1px purple, 0 0 1px darkblue;
+  color: white;
+  font-size: 1rem;
+  font-style: oblique;
+  font-weight: 300;
+  margin-bottom: 5px;
+  padding: 1em 2em 0.5em 0em;
+  width: 100%;
+  height: 15rem;
+  justify-content: center;
+  text-align: center;;
   overflow-x: hidden;
   overflow-y: scroll;
   z-index: 1;
 }
 
 .descriptionHeader {
-  text-align: left;
-  height: 3rem;
-  color: rgb(0, 0, 0);
+  background-color: lightgray;
+  color: white;
+  text-shadow: 1px 1px 1px green, 0 0 1px purple, 0 0 1px darkblue;
+  outline: 2px solid rgba(16, 131, 104, 0.247);
+  border: 2px solid rgba(10, 95, 121, 0.658);
   padding: 0.5em;
+  height: 3rem;
   border-radius: 10px;
   justify-content: center;
+<<<<<<< HEAD
   text-align: left;
   text-shadow: 1px 1px 1px green, 0 0 1px purple, 0 0 1px darkblue;
+=======
+  text-align: center;
+>>>>>>> d8c7a6c3b37ec1254f17153a7a14c6ab71cef4c6
   font-weight: 300;
   font-size: 1rem;
   font-style: oblique;
-  background-color: lightgray;
-  outline: 2px solid rgba(16, 131, 104, 0.247);
-  border: 2px solid rgba(10, 95, 121, 0.658);
 }
 
 .author {
@@ -174,13 +180,17 @@ h6 {
 }
 
 .btn-block {
+  background-color: green;
+  color: white;
+  text-shadow: 2 4 4px purple, 0 0 25px purple, 0 0 5px darkblue;
   width: 100%;
   padding: 0.5em;
   text-align: center;
   font-size: large;
-  text-shadow: 2px 4px 4px purple, 0 0 25px purple, 0 0 5px darkblue;
+  justify-content: baseline;
   display: block;
   border: 2px solid rgb(173, 223, 169);
+  border-radius: 10px;
   outline: 2px solid rgba(169, 223, 210, 0.541);
   margin: 10 auto;
   top: 10px;
@@ -189,6 +199,7 @@ h6 {
     0 6px 20px 0 rgba(23, 135, 155, 0.925);
 }
 
+<<<<<<< HEAD
 .headings {
   text-shadow: rgba(169, 223, 210, 0.541);
   outline: rgba(red, green, blue, alpha);
@@ -205,6 +216,9 @@ h6 {
 }
 
 @media (min-width: 640px) {
+=======
+@media only screen and (min-width: 640px) {
+>>>>>>> d8c7a6c3b37ec1254f17153a7a14c6ab71cef4c6
   .card-container {
     display: flex;
     flex-flow: wrap;
@@ -216,7 +230,11 @@ h6 {
   }
 }
 
+<<<<<<< HEAD
 @media (min-width: 1001px) {
+=======
+@media only screen and (min-width: 1001px) {
+>>>>>>> d8c7a6c3b37ec1254f17153a7a14c6ab71cef4c6
   .card {
     flex: 1 0 31%;
   }

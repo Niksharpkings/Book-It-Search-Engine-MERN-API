@@ -81,6 +81,7 @@ const SavedBooks = () => {
 
   return (
     <div fluid="true" className="card-container text-light bg-dark">
+<<<<<<< HEAD
       <>
         <h2 className="text-center" style={{ fontFamily: "fantasy", fontSize: "3rem" }}>
           Viewing {userData.savedBooks.length} saved{" "} {userData.savedBooks.length === 1 ? "book" : "books"} : 'You have no saved books!{" "}
@@ -88,6 +89,13 @@ const SavedBooks = () => {
         {/* {userData.savedBooks.length ? `Viewing ${userData.savedBooks.length} saved $(userData.savedBooks.length === 1  ? 'book' : 'books'}` : 'You have no saved books!'} */}
       </>
       <div className="card-container text-light bg-dark">
+=======
+      <h1>
+        {userData.savedBooks.length
+          ? `Viewing ${userData.savedBooks.length} saved ${ userData.savedBooks.length === 1 ? "book" : "books" } : "You have no saved books!"`
+      </h1>
+      <div className="card-container">
+>>>>>>> d8c7a6c3b37ec1254f17153a7a14c6ab71cef4c6
         {userData.savedBooks.map((book) => {
           return (
             <Card key={book.bookId} border="dark" className="card">
