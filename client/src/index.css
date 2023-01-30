@@ -37,7 +37,6 @@ h6 {
   margin: 0.5em auto;
   background-color: rgba(31, 31, 31, 0.95);
   border: 2px solid rgb(173, 223, 169);
-  width: 90%;
   align-items: center;
   border-radius: 10px;
   color: white;
@@ -49,31 +48,14 @@ h6 {
   margin-bottom: 5px;
   margin-top: 10px;
   height: 5rem;
-  padding-bottom: 10px;
   color: white;
   text-align: center;
-  padding: 0.5em;
+  padding: 0.5em 0.5em 10px 0.5em;
   font-size: 1.2rem;
   text-shadow: 2px 2px 2px rgba(32, 138, 170, 0.658), 0 0 10px purple,
     0 0 10px rgb(84, 173, 10);
 }
-.btn-block {
-  background-color: green;
-  justify-content: baseline;
-  border-radius: 10px;
-  color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.822),
-    0 6px 20px 0 rgba(23, 135, 155, 0.925);
-  margin: auto;
-  width: 100%;
-  padding: 0.5em;
-  text-align: center;
-  font-size: large;
-  text-shadow: 2px 4px 4px purple, 0 0 25px purple, 0 0 5px darkblue;
-  display: block;
-  border: 2px solid rgb(173, 223, 169);
-  outline: 2px solid rgba(169, 223, 210, 0.541);
-}
+
 .images,
 .description {
   width: 90%;
@@ -88,10 +70,6 @@ h6 {
   height: 300px;
 }
 
-.description {
-  color: white;
-  padding: 1em 2em;
-}
 .images img {
   display: block;
   margin: 0 auto;
@@ -100,13 +78,14 @@ h6 {
   object-fit: cover;
   object-position: 15% 100%;
 }
+
 .description {
-  padding-bottom: 0.5em;
+  color: white;
+  padding: 0.5em;
   margin-bottom: 5px;
-  text-align: left;
   height: 15rem;
   color: rgb(0, 0, 0);
-  padding: 0.5em;
+  padding: 1em 2em 0.5em 0em;
   border-radius: 10px;
   justify-content: center;
   text-align: center;
@@ -124,7 +103,6 @@ h6 {
 }
 
 .descriptionHeader {
-  text-align: left;
   height: 3rem;
   color: rgb(0, 0, 0);
   padding: 0.5em;
@@ -156,6 +134,7 @@ h6 {
   outline: 2px solid rgba(16, 131, 104, 0.247);
   border: 2px solid rgba(10, 95, 121, 0.658);
 }
+
 .title {
   font-size: 1em;
   font-weight: 300;
@@ -166,13 +145,17 @@ h6 {
 }
 
 .btn-block {
+  background-color: green;
+  color: white;
+  text-shadow: 2 4 4px purple, 0 0 25px purple, 0 0 5px darkblue;
   width: 100%;
   padding: 0.5em;
   text-align: center;
   font-size: large;
-  text-shadow: 2px 4px 4px purple, 0 0 25px purple, 0 0 5px darkblue;
+  justify-content: baseline;
   display: block;
   border: 2px solid rgb(173, 223, 169);
+  border-radius: 10px;
   outline: 2px solid rgba(169, 223, 210, 0.541);
   margin: 10 auto;
   top: 10px;
